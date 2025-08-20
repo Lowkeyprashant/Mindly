@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.codewithprashant.mindly" />
+                  <option name="mobileSdkAppId" value="1:254814488333:android:a01ebfd6b0f3760dd71244" />
+                  <option name="projectId" value="mindly-4feba" />
+                  <option name="projectNumber" value="254814488333" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

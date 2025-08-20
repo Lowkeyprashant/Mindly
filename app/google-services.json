@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "254814488333",
+    "project_id": "mindly-4feba",
+    "storage_bucket": "mindly-4feba.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254814488333:android:a01ebfd6b0f3760dd71244",
+        "android_client_info": {
+          "package_name": "com.codewithprashant.mindly"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRQBns6EgV34-i1k9l09wkTodrP_tWORs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.room.Room
 import com.codewithprashant.mindly.data.database.MindlyDatabase
 import com.codewithprashant.mindly.data.database.QuizDao
-import com.codewithprashant.mindly.data.repository.QuizRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,9 +17,9 @@ object DatabaseModule {
 
     @Provides
     @Singleton
-    fun provideMindlyDatabase(@ApplicationContext context: Context): MindlyDatabase {
+    fun provideDatabase(@ApplicationContext context: Context): MindlyDatabase {
         return Room.databaseBuilder(
-            context,
+            context.applicationContext,
             MindlyDatabase::class.java,
             "mindly_database"
         ).build()
@@ -29,11 +28,5 @@ object DatabaseModule {
     @Provides
     fun provideQuizDao(database: MindlyDatabase): QuizDao {
         return database.quizDao()
-    }
-
-    @Provides
-    @Singleton
-    fun provideQuizRepository(quizDao: QuizDao): QuizRepository {
-        return QuizRepository(quizDao)
     }
 }

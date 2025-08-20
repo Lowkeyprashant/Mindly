@@ -10,36 +10,41 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Blue,
-    secondary = LightBlue,
-    tertiary = NavyBlue,
-    background = DarkGrey,
-    surface = DarkGrey,
-    onPrimary = White,
-    onSecondary = White,
-    onTertiary = White,
-    onBackground = LightGrey,
-    onSurface = LightGrey
+private val LightColorScheme = lightColorScheme(
+    primary = MindlyPrimary,
+    secondary = MindlySecondary,
+    tertiary = Pink40,
+    background = MindlyBackground,
+    surface = MindlySurface,
+    onPrimary = MindlyOnPrimary,
+    onSecondary = MindlyOnSecondary,
+    onTertiary = Color(0xFFFFFFFF),
+    onBackground = MindlyOnBackground,
+    onSurface = MindlyOnSurface,
+    error = MindlyError
 )
 
-private val LightColorScheme = lightColorScheme(
-    primary = Blue,
-    secondary = LightBlue,
-    tertiary = NavyBlue,
-    background = White,
-    surface = White,
-    onPrimary = White,
-    onSecondary = White,
-    onTertiary = White,
-    onBackground = DarkGrey,
-    onSurface = DarkGrey
+private val DarkColorScheme = darkColorScheme(
+    primary = MindlyPrimary,
+    secondary = MindlySecondary,
+    tertiary = Pink80,
+    background = MindlyBackgroundDark,
+    surface = MindlySurfaceDark,
+    onPrimary = MindlyOnPrimary,
+    onSecondary = MindlyOnSecondary,
+    onTertiary = Color.Black,
+    onBackground = MindlyOnBackgroundDark,
+    onSurface = MindlyOnSurfaceDark,
+    error = MindlyError,
+    onError = MindlyOnError
 )
+
 
 @Composable
 fun MindlyTheme(
@@ -53,6 +58,7 @@ fun MindlyTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
+
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
